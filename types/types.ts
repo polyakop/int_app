@@ -1,9 +1,9 @@
 
 export type UserPropsType = {
 
-    userName: null | string,
-    userId: null | string,
-    tel: null | string,
-    bank: null | string,
+    userName: string,
+    userId: string,
+    tel: string,
+    bank: string,
    
 }

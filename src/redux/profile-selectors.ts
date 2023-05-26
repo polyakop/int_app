@@ -2,7 +2,7 @@
 
 import { AppStateType } from "./redux-store"
 
-export const getUser = (state:AppStateType) => {
+export const getUsers = (state:AppStateType) => {
     return state.profilePage.userData
 }
 

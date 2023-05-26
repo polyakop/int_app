@@ -1,6 +1,6 @@
 import React from "react";
 import { UserPropsType } from "../../../types/types";
-import { getSum, getUser } from "../../redux/profile-selectors";
+import { getSum, getUsers} from "../../redux/profile-selectors";
 import { useDispatch, useSelector } from 'react-redux';
 
 type PropsType = {}
@@ -8,7 +8,7 @@ type PropsType = {}
 
 
 export const UserDataForm: React.FC<PropsType> = () => {
-    const user = useSelector(getUser)
+    const user = useSelector(getUsers)
     // const sum: number = useSelector(getSum)
     return (
     <div>

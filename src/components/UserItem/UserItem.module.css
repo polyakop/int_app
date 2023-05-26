@@ -1,0 +1,30 @@
+
+.user {
+    background-color: rgb(248, 249, 249);
+    width: 98%;
+    border-radius: 5px;
+    border: 1px solid brown;
+}
+.user:hover {
+    background-color: rgb(117, 225, 225);
+    
+    border: 1px solid brown;
+}
+
+.userSelected {
+    background-color: yellow;
+    width: 98%;
+    border-radius: 5px;
+    border: 1px solid brown;
+}
+
+[data-user='tel'] {
+    margin-top: 2px;
+    color: rgb(48, 41, 145);
+    font-weight: bold;
+}
+
+[data-user = 'name'] {
+    margin-top: -14px;
+    color: gray;
+}

@@ -1,0 +1,100 @@
+.modalBackground {
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.modalWindow {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 11, 11, 0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+
+}
+
+.wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "h h"
+        "l i"
+        "b b";
+
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-columns: 140px 1fr;
+}
+
+.header {
+    margin-top: 20px;
+    grid-area: h;
+    font-size: 12px;
+
+}
+
+/* _____list________ */
+.userList {
+    margin-left: 5px;
+    grid-area: l;
+    /* border: 2px solid rgba(70, 69, 69, 0.8);
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset; */
+    background: rgb(118, 122, 125);
+    background: linear-gradient(221deg, rgb(104, 110, 114) 0%, rgba(61, 66, 70, 1) 45%, rgba(61, 67, 71, 1) 100%);
+    border-radius: 10px;
+    font-size: 10px;
+    box-sizing: border-box;
+
+}
+
+.userList h2 {
+    margin-top: 5px;
+    height: 12px;
+}
+
+.user {
+
+    display: flexbox;
+    justify-content: center;
+
+}
+
+
+/* _______Info_________ */
+.userInfo {
+    grid-area: i;
+    font-size: 10px;
+    margin-left: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0px 5px 7px;
+    width: 75%;
+    background-color: rgb(248, 249, 249);
+    color: black;
+
+}
+
+.userInfo h2 {
+    margin-top: 5px;
+    margin-bottom: 35px;
+    height: 12px;
+}
+
+[data-info] {
+    text-align: left;
+    margin-top: -5px;
+}
+
+
+/* _______buttons_________ */
+
+.buttons {
+    grid-area: b;
+    margin-top: 20px;
+}

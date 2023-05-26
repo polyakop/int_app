@@ -1,4 +1,4 @@
-import { FormAction} from 'redux-form';
+import { FormAction } from 'redux-form';
 import { BaseThunkType, InferActionsTypes } from './redux-store';
 import { UserPropsType } from '../../types/types';
 
@@ -6,38 +6,50 @@ import { UserPropsType } from '../../types/types';
 const types = {
     ADD_USER: 'int_app/profile/ADD_USER' as 'gp-network/profile/ADD_USER',
     ADD_SUM: 'int_app/profile/ADD_SUM' as 'gp-network/profile/ADD_SUM',
-   
+
 }
 
 let initialState = {
     userData: [
-        {userName: 'Марина Евгеньевна А',  userId: '00-01',
-tel: '+7(963) 915-11-60',
-bank: 'Сбербанк'},
+        {
+            userName: 'Марина Евгеньевна А',
+            userId: '00-01',
+            tel: '+7(963) 915-11-60',
+            bank: 'Сбербанк'
+        },
+        {
+            userName: 'Анна Александровна П',
+            userId: '00-02',
+            tel: '+7(963) 911-39-60',
+            bank: 'Сбербанк'
+        },
+
+
+
     ] as Array<UserPropsType>,
-sum: 0 as number
-       
+    sum: 0 as number
+
 };
 
 const profileReducer = (state = initialState, action: ActionsTypes): InitialStateType => {
     switch (action.type) {
         case types.ADD_USER: {
-            
+
             return {
                 ...state,
-                userData: [...state.userData, { userName: action.userData.userName, userId: '00-02', tel: action.userData.tel, bank: action.userData.bank}]
+                userData: [...state.userData, { userName: action.userData.userName, userId: '00-03', tel: action.userData.tel, bank: action.userData.bank }]
             }
         }
 
         case types.ADD_SUM: {
-            
+
             return {
                 ...state,
                 sum: action.sum
             }
         }
 
-        
+
         default:
             return state;
     }
@@ -53,12 +65,10 @@ export const actions = {
 export default profileReducer
 
 /* thunk */
-export const getUserProfile = (userId: number): ThunkType => async (dispatch, getState) => {
-    // dispatch(actions.profileToggleIsFetching(true));
-
-    // const data = await profileAPI.getProfile(userId)
-    // dispatch(actions.setUserProfile(data));
-    // dispatch(actions.profileToggleIsFetching(false));
+export const setSum = (sum: number): ThunkType => async (dispatch, getState) => {
+    debugger
+    console.log('dispatching sum')
+    dispatch(actions.addSum(sum));
 }
 
 
