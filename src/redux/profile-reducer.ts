@@ -1,6 +1,7 @@
 import { FormAction } from 'redux-form';
 import { BaseThunkType, InferActionsTypes } from './redux-store';
 import { UserPropsType } from '../../types/types';
+import { UserFormValueType } from '../components/UserAddModal/UserAddModal';
 
 
 const types = {
@@ -23,6 +24,18 @@ let initialState = {
             tel: '+7(963) 911-39-60',
             bank: 'Сбербанк'
         },
+        {
+            userName: 'Муслима Домлоджоновна Н',
+            userId: '00-03',
+            tel: '+7(987) 948-35-69',
+            bank: 'Сбербанк'
+        },
+        {
+            userName: 'Наргиза Уктамжоновна Б',
+            userId: '00-04',
+            tel: '+7(987) 437-77-37',
+            bank: 'Сбербанк'
+        },
 
 
 
@@ -37,7 +50,7 @@ const profileReducer = (state = initialState, action: ActionsTypes): InitialStat
 
             return {
                 ...state,
-                userData: [...state.userData, { userName: action.userData.userName, userId: '00-03', tel: action.userData.tel, bank: action.userData.bank }]
+                userData: [...state.userData, { userName: action.userData.userName, userId: ('00-0' + String((state.userData.length + 1))) , tel: action.userData.tel, bank: action.userData.bank }]
             }
         }
 
@@ -57,7 +70,7 @@ const profileReducer = (state = initialState, action: ActionsTypes): InitialStat
 
 /* Создание объектов action */
 export const actions = {
-    addUserData: (userData: UserPropsType) => ({ type: types.ADD_USER, userData } as const),
+    addUserData: (userData: UserFormValueType) => ({ type: types.ADD_USER, userData } as const),
     addSum: (sum: number) => ({ type: types.ADD_SUM, sum } as const),
 
 }

@@ -25,31 +25,33 @@
     display: grid;
     grid-template-areas:
         "h h"
-        "l i"
+        "l l"
+        "i i"
         "b b";
 
-    grid-template-rows: 100px 1fr 50px;
+    grid-template-rows: 100px auto 1fr 50px;
     grid-template-columns: 140px 1fr;
 }
 
 .header {
     margin-top: 20px;
     grid-area: h;
-    font-size: 12px;
+    font-size: 13px;
 
 }
 
 /* _____list________ */
 .userList {
-    margin-left: 5px;
+    margin-left: 20%;
     grid-area: l;
     /* border: 2px solid rgba(70, 69, 69, 0.8);
     box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset; */
     background: rgb(118, 122, 125);
     background: linear-gradient(221deg, rgb(104, 110, 114) 0%, rgba(61, 66, 70, 1) 45%, rgba(61, 67, 71, 1) 100%);
     border-radius: 10px;
-    font-size: 10px;
+    font-size: 0.8rem;
     box-sizing: border-box;
+    width: 60%;
 
 }
 
@@ -69,14 +71,19 @@
 /* _______Info_________ */
 .userInfo {
     grid-area: i;
-    font-size: 10px;
-    margin-left: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-left: -1px;
     border: 1px solid black;
     border-radius: 10px;
     padding: 0px 5px 7px;
-    width: 75%;
+    width: 98%;
     background-color: rgb(248, 249, 249);
     color: black;
+
+    display:grid;
+        justify-content: center;
+        align-items: center;
 
 }
 

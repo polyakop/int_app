@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { UserPropsType } from "../../../types/types";
 import css from './MainPage.module.css'
 import { getSum, getUsers } from "../../redux/profile-selectors";
-import { useDispatch, useSelector, useStore } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { UserItem } from "../UserItem/UserItem";
-import homePic from '../../Assets/Img/2023-05-20 10-00-16.jpg'
+// import homePic from '../../Assets/Img/2023-05-20 10-00-16.jpg'
 import { Button, Space } from "antd";
 import { setSum } from "../../redux/profile-reducer";
 import { AppDispatchType } from "../../redux/redux-store";
 import { SumAddModal } from '../SumAddModal/SumAddModal'
+import { UserAddModal } from "../UserAddModal/UserAddModal";
+
 
 
 type PropsType = {}
@@ -23,14 +25,14 @@ export const MainPage: React.FC<PropsType> = () => {
 
     const [selectedUser, setSelectedUser] = useState<SelectedUserType | null>(null)
     // _______Modal window state________
-    const [isSumClicked, setIsSumClicked] = useState(false)
     const [isAddClicked, setIsAddClicked] = useState(false)
+    const [isSumClicked, setIsSumClicked] = useState(false)
     const [isResultClicked, setIsResultClicked] = useState(false)
 
-let isModal = false
+    let isModal = false
 
-    if (isSumClicked || isAddClicked || isResultClicked) { isModal = true}
-  
+    if (isSumClicked || isAddClicked || isResultClicked) { isModal = true }
+
     let userListElement = users.map((u: UserPropsType) => (
         <UserItem
             key={u.userId}
@@ -44,8 +46,8 @@ let isModal = false
         />
     ))
     return (
-        <body>
-            <div className={isModal && css.modalBackground}>
+        <div>
+            <div className={(!!isModal) ? css.modalBackground : ''}>
 
                 <div className={css.wrapper}>
                     <div className={css.header}>
@@ -69,16 +71,17 @@ let isModal = false
                             </div>
 
                         }
-                        <p>your sum is {sum}</p>
+                        <p style={{ fontWeight: 'bold' }}>your sum is {sum}</p>
                     </div>
-
-
 
                     <div className={css.buttons}>
                         <Space direction="horizontal">
-                            <Button type="primary" size={"small"} style={{ backgroundColor: "#fee600", color: 'black' }}>Add</Button>
-                            <Button type="primary" size={"small"} style={{ backgroundColor: "#fee600", color: 'black' }} onClick={() => setIsSumClicked(true)}>Sum</Button>
-                            <Button type="primary" size={"small"} style={{ backgroundColor: "#fee600", color: 'black' }}>Result</Button>
+                            <Button type="primary" size={"middle"} style={{ backgroundColor: "#fee600", color: 'black'}}
+                                onClick={() => setIsAddClicked(true)}>Add</Button>
+                            <Button type="primary" size={"middle"} style={{ backgroundColor: "#fee600", color: 'black' }}
+                                onClick={() => setIsSumClicked(true)}>Sum</Button>
+                            <Button type="primary" size={"middle"} style={{ backgroundColor: "#fee600", color: 'black' }}
+                                onClick={() => setIsResultClicked(true)}                            >Result</Button>
                         </Space>
 
                         {/* <img src={homePic} alt="" style={{width:'200px'}} /> */}
@@ -86,15 +89,23 @@ let isModal = false
 
                 </div>
             </div>
+            {/*_________ Modal WINDOWS_________ */}
+            {/* 1 Sum modal */}
             {isSumClicked &&
                 <div className={css.modalWindow}>
                     <SumAddModal sumValue={sum} addedSum={setSum} setIsSumClicked={setIsSumClicked} />
-                </div> 
+                </div>
+            }
+            {/* 2 Add modal */}
+            {isAddClicked &&
+                <div className={css.modalWindow}>
+                    <UserAddModal setIsAddClicked={setIsAddClicked} />
+                </div>
             }
 
 
 
-        </body>
+        </div>
     )
 }
 

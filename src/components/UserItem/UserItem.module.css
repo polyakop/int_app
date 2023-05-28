@@ -6,13 +6,13 @@
     border: 1px solid brown;
 }
 .user:hover {
-    background-color: rgb(117, 225, 225);
+    background-color: #fee600;
     
     border: 1px solid brown;
 }
 
 .userSelected {
-    background-color: yellow;
+    background-color: #fee600;
     width: 98%;
     border-radius: 5px;
     border: 1px solid brown;

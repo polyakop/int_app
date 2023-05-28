@@ -1,0 +1,81 @@
+/* .modalBackground {
+    position: fixed;
+
+    width: 100vw;
+    height: 100vw;
+    background: rgba(12, 11, 11, 0.43);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */   
+
+.modalContainer {
+    width: 250px;
+    height: 280px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.149) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    position: relative;
+
+}
+
+.modalContainer .CloseBtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -20px;
+    margin-right: -20px;
+    z-index: 20;
+}
+
+.CloseBtn button {
+    background-color: transparent;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+    color: white;
+
+}
+
+.modalContainer .title {
+    background-color:#fee600;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    font-size: 1rem;
+    margin-top: -5px;
+    margin-left: -5px;
+    margin-bottom: 20px;
+    height: 43px;
+    position: absolute;
+    width: 100%;
+    padding-top: 15px;
+
+}
+
+.modalContainer .body {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+}
+
+.modalContainer .body input {
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 90%;
+}
+
+
+
+.modalContainer .footer {
+    display: flex;
+    flex: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
