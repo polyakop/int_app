@@ -10,6 +10,7 @@ import { setSum } from "../../redux/profile-reducer";
 import { AppDispatchType } from "../../redux/redux-store";
 import { SumAddModal } from '../SumAddModal/SumAddModal'
 import { UserAddModal } from "../UserAddModal/UserAddModal";
+import { ResultModal } from "../Result/ResultModal";
 
 
 
@@ -90,16 +91,25 @@ export const MainPage: React.FC<PropsType> = () => {
                 </div>
             </div>
             {/*_________ Modal WINDOWS_________ */}
-            {/* 1 Sum modal */}
+            {/* 1 Add modal */}
+            {isAddClicked &&
+                <div className={css.modalWindow}>
+                    <UserAddModal setIsAddClicked={setIsAddClicked} />
+                </div>
+            }
+
+            {/* 2 Sum modal */}
             {isSumClicked &&
                 <div className={css.modalWindow}>
                     <SumAddModal sumValue={sum} addedSum={setSum} setIsSumClicked={setIsSumClicked} />
                 </div>
             }
-            {/* 2 Add modal */}
-            {isAddClicked &&
+          
+
+            {/* 3 Result modal */}
+            {isResultClicked &&
                 <div className={css.modalWindow}>
-                    <UserAddModal setIsAddClicked={setIsAddClicked} />
+                    <ResultModal setIsResultClicked={setIsResultClicked} sum={sum} selectedUser={selectedUser}/>
                 </div>
             }
 
