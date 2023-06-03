@@ -30,8 +30,9 @@ export const ResultModal: React.FC<PropsType> = ({ sum, selectedUser, setIsResul
         >
             <div className={css.modalContainer}>
                 <div className={css.CloseBtn}>
-                    <button onClick={() => setIsResultClicked(false)} ><CloseCircleTwoTone twoToneColor={'white-black'}
-                    /></button>
+                    <button onClick={() => setIsResultClicked(false)} >
+                        <CloseCircleTwoTone twoToneColor={'white-black'} style={{fontSize:'40px'}} />
+                        </button>
                 </div>
                 <div className={css.title}>
                     Успешно
