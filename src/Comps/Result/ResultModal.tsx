@@ -58,11 +58,12 @@ export const ResultModal: React.FC<PropsType> = ({ sum, selectedUser, setIsResul
                     <div data-title='user'> Получатель </div>
                     <div data-atrib='userName'> {selectedUser?.userName}</div>
                     <div data-atrib='tel'>{selectedUser?.tel} </div>
-                    <div data-atrib='bank'>{selectedUser?.bank} </div>
+                    <div data-atrib='bData'>{selectedUser?.bData} </div>
                     
                     <div data-trans> Через СБП</div>
                     <img src= {logo} alt="SBP logo" />
                     <div className={css.line}></div>
+                    <div className={css.line2}></div>
 
                 </div>
 

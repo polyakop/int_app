@@ -40,7 +40,7 @@ export const MainPage: React.FC<PropsType> = () => {
             userId={u.userId}
             userName={u.userName}
             tel={u.tel}
-            bank={u.bank}
+            bData={u.bData}
             onUserSelected={setSelectedUser}
             selectedUser={selectedUser}
 
@@ -67,7 +67,7 @@ export const MainPage: React.FC<PropsType> = () => {
                             <div data-info>
                                 <p data-info='tel'> T: {selectedUser.tel}</p>
                                 <p data-info='userName'>N: {selectedUser.userName}</p>
-                                <p data-info='bank'>B: {selectedUser.bank}</p>
+                                <p data-info='bData'>B: {selectedUser.bData}</p>
 
                             </div>
 

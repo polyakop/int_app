@@ -1,7 +1,7 @@
 import { FormAction } from 'redux-form';
 import { BaseThunkType, InferActionsTypes } from './redux-store';
 import { UserPropsType } from '../../types/types';
-import { UserFormValueType } from '../components/UserAddModal/UserAddModal';
+import { UserFormValueType } from '../Comps/UserAddModal/UserAddModal';
 
 
 const types = {
@@ -16,25 +16,31 @@ let initialState = {
             userName: 'Марина Евгеньевна А',
             userId: '00-01',
             tel: '+7 963 915-11-60',
-            bank: 'Сбербанк'
+            bData: 'Сбербанк'
         },
         {
             userName: 'Анна Александровна П',
             userId: '00-02',
             tel: '+7 963 911-39-60',
-            bank: 'Сбербанк'
+            bData: 'Сбербанк'
         },
         {
             userName: 'Муслима Домлоджоновна Н',
             userId: '00-03',
             tel: '+7 987 948-35-69',
-            bank: 'Сбербанк'
+            bData: 'Сбербанк'
         },
         {
             userName: 'Наргиза Уктамжоновна Б',
             userId: '00-04',
-            tel: '+7987 437-77-37',
-            bank: 'Сбербанк'
+            tel: '+7 987 437-77-37',
+            bData: 'Сбербанк'
+        },
+        {
+            userName: 'Илхомджон Икромович С',
+            userId: '00-05',
+            tel: '+7 996 723-11-51',
+            bData: 'Сбербанк'
         },
 
 
@@ -50,7 +56,7 @@ const profileReducer = (state = initialState, action: ActionsTypes): InitialStat
 
             return {
                 ...state,
-                userData: [...state.userData, { userName: action.userData.userName, userId: ('00-0' + String((state.userData.length + 1))) , tel: action.userData.tel, bank: action.userData.bank }]
+                userData: [...state.userData, { userName: action.userData.userName, userId: ('00-0' + String((state.userData.length + 1))) , tel: action.userData.tel, bData: action.userData.bData }]
             }
         }
 

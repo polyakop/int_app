@@ -119,14 +119,6 @@ margin-top: 16px;
 
 }
 
-[data-title='count'] {}
-[data-atrib='number'] {}
-
-[data-title='user'] {}
-[data-atrib='userName'] {}
-[data-atrib='tel'] {}
-[data-atrib='bank'] {}
-
 [data-trans] {
     font-weight: 350;
     font-size: 15px;
@@ -144,6 +136,13 @@ margin-top: 16px;
 .line{
     height: 25px;
     border-bottom: 4px solid white;
+    width: 40px;
+    margin-left: 40%;
+}
+
+.line2{
+    height: 25px;
+    border: transparent;
     width: 40px;
     margin-left: 40%;
 }

@@ -30,7 +30,7 @@ export const UserItem: React.FC<UserPropsType & UserItemPropsType> = ({ selected
                     userName: user.userName,
                     userId: user.userId,
                     tel: user.tel,
-                    bank: user.bank
+                    bData: user.bData
                 })
             }
         }>

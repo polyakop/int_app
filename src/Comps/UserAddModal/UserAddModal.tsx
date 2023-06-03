@@ -20,7 +20,7 @@ export type SelectedUserType = UserPropsType
 
 export type UserFormValueType = {
     tel: string,
-    bank: string,
+    bData: string,
     userName: string
 }
 
@@ -39,8 +39,8 @@ export const UserAddModal: React.FC<PropsType> = ({ setIsAddClicked }) => {
     // }
 
     const userData: UserFormValueType = {
-        tel: '',
-        bank: '',
+        tel: '+7 9',
+        bData: '',
         userName: ''
     }
 
@@ -72,21 +72,22 @@ export const UserAddModal: React.FC<PropsType> = ({ setIsAddClicked }) => {
                         onSubmit={submit}
                     >
                         <Form>
-                            <label htmlFor="tel">Phone</label>
+                            <label htmlFor="tel">Телефон</label>
                             <Field id='tel' name='tel' placeholder='phone #' />
+                            <div className={css.telFormat}>format: (+7 xxx xxx-xx-xx)</div>
 
-                            <label htmlFor="userName">Name</label>
+                            <label htmlFor="userName">Имя</label>
                             <Field id='userName' name='userName' placeholder='User Name' />
 
-                            <label htmlFor="bank">Bank</label>
-                            <Field id='bank' name='bank' placeholder='Bank name' />
+                            <label htmlFor="bData">Б-данные</label>
+                            <Field id='bData' name='bData' placeholder='B name' />
 
                             <div className={css.footer}>
                                 <Space direction="horizontal">
                                     <Button
                                         type="primary" size={"small"} style={{ backgroundColor: "#fee600", color: 'black' }}
                                         htmlType="submit"
-                                    >OKi</Button>
+                                    >OK</Button>
                                     <Button type="primary" size={"small"} style={{ backgroundColor: "#fee600", color: 'black' }} onClick={() => setIsAddClicked(false)}>Cancel</Button>
                                 </Space>
                             </div>
