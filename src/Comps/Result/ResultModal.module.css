@@ -20,7 +20,7 @@
     flex-direction: column;
     padding: 5px;
     position: relative;
-    margin-top: -270px;
+    margin-top: -205px;
 
 }
 
@@ -28,7 +28,7 @@
     display: flex;
     justify-content: flex-end;
     margin-top: -20px;
-    margin-right: -34px;
+    margin-right: -40px;
     z-index: 2;
 }
 
@@ -61,7 +61,7 @@
 
 .modalContainer .title p{
     margin-top: -10px;
-    margin-left: 11px;
+    margin-left: -8px;
 }
 
 .checkSign {
@@ -71,7 +71,7 @@
     height: 63px;
     width: 63px;
     margin-top: 12px;
-    margin-left: 129px;
+    margin-left: 117px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +113,7 @@
 
 .additionalInfo{
 font-weight: 500;
-margin-top: 55px;
+margin-top: 44px;
 font-size: 1.1rem;
 
 
@@ -127,13 +127,14 @@ margin-top: 16px;
 }
 
 [data-atrib] {
-    margin-top: 10px;
+    margin-top: 4px;
+    line-height: 20px;
 }
 
 [data-trans] {
     font-weight: 350;
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 18px;
     position: relative;
 }
 

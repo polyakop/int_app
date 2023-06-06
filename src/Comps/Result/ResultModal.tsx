@@ -68,6 +68,8 @@ export const ResultModal: React.FC<PropsType> = ({ sum, selectedUser, setIsResul
                     <img src={logo} alt="SBP logo" />
                     <div className={css.line}></div>
                     <div className={css.line2}></div>
+                    <div className={css.line2}></div>
+                    <div className={css.line2}></div>
 
                 </div>
 
