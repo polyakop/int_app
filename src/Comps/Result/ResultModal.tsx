@@ -31,8 +31,8 @@ export const ResultModal: React.FC<PropsType> = ({ sum, selectedUser, setIsResul
             <div className={css.modalContainer}>
                 <div className={css.CloseBtn}>
                     <button onClick={() => setIsResultClicked(false)} >
-                        <CloseCircleTwoTone twoToneColor={'white-black'} style={{fontSize:'40px'}} />
-                        </button>
+                        <CloseCircleTwoTone twoToneColor={'white-black'} style={{ fontSize: '40px' }} />
+                    </button>
                 </div>
                 <div className={css.title}>
                     Успешно
@@ -48,21 +48,24 @@ export const ResultModal: React.FC<PropsType> = ({ sum, selectedUser, setIsResul
                     <div className={css.sum}>
                         <p style={{ fontSize: '26px', marginTop: '17px' }}>{sum}</p>
                         <p>,00 ₽</p>
-                       
+
                     </div>
 
-                    
+
                 </div>
                 <div className={css.additionalInfo}>
-                    <div data-title='count'> Со счета </div>
-                    <div data-atrib='number'> *3721598</div>
-                    <div data-title='user'> Получатель </div>
-                    <div data-atrib='userName'> {selectedUser?.userName}</div>
-                    <div data-atrib='tel'>{selectedUser?.tel} </div>
-                    <div data-atrib='bData'>{selectedUser?.bData} </div>
-                    
+                    <div data-title> Со счета </div>
+                    <div data-atrib> *3721598</div>
+                    <div data-title> Получатель </div>
+                    <div data-atrib>
+                        <div > {selectedUser?.userName}</div>
+                        <div >{selectedUser?.tel} </div>
+                        <div >{selectedUser?.bData} </div>
+                    </div>
+
+
                     <div data-trans> Через СБП</div>
-                    <img src= {logo} alt="SBP logo" />
+                    <img src={logo} alt="SBP logo" />
                     <div className={css.line}></div>
                     <div className={css.line2}></div>
 

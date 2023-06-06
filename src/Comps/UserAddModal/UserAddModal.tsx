@@ -44,8 +44,6 @@ export const UserAddModal: React.FC<PropsType> = ({ setIsAddClicked }) => {
         userName: ''
     }
 
-    // Убрать userID из reducer
-
     const submit = (values: UserFormValueType, { setSubmitting }: FormikHelpers<UserFormValueType>) => {
         dispatch(actions.addUserData(values))
         console.log('added user', values)
