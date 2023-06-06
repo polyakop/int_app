@@ -35,7 +35,7 @@ export const ResultModal: React.FC<PropsType> = ({ sum, selectedUser, setIsResul
                     </button>
                 </div>
                 <div className={css.title}>
-                    Успешно
+                    <p>Успешно</p> 
                     <div className={css.checkSign} >
                         <CheckOutlined style={{ fontSize: '30px' }} />
                     </div>
