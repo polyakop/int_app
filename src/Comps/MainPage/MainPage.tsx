@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { UserPropsType } from "../../../types/types";
 import css from './MainPage.module.css'
 import { getSum, getUsers } from "../../redux/profile-selectors";
-import { useDispatch, useSelector } from 'react-redux';
 import { UserItem } from "../UserItem/UserItem";
 import { Button, Space } from "antd";
 import { setSum } from "../../redux/profile-reducer";
-import { AppDispatchType } from "../../redux/redux-store";
 import { SumAddModal } from '../SumAddModal/SumAddModal'
 import { UserAddModal } from "../UserAddModal/UserAddModal";
 import { ResultModal } from "../Result/ResultModal";
+import { useSelector } from "react-redux";
 
 
 
@@ -21,8 +20,7 @@ export type SelectedUserType = UserPropsType
 export const MainPage: React.FC<PropsType> = () => {
     const users = useSelector(getUsers)
     const sum = useSelector(getSum)
-    const dispatch: AppDispatchType = useDispatch()
-
+    
     const [selectedUser, setSelectedUser] = useState<SelectedUserType | null>(null)
     // _______Modal window state________
     const [isAddClicked, setIsAddClicked] = useState(false)
