@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { UserPropsType } from "../../../types/types";
 import css from './ResultModal.module.css'
 import logo from '../../Assets/Img/SBP.png'
-
-
-import { useDispatch } from 'react-redux';
 import { CloseCircleTwoTone, CheckOutlined } from '@ant-design/icons';
-import { AppDispatchType } from "../../redux/redux-store";
-import { actions } from "../../redux/profile-reducer";
+
 
 
 type PropsType = {
@@ -21,8 +17,7 @@ export type SelectedUserType = UserPropsType
 
 export const ResultModal: React.FC<PropsType> = ({ sum, selectedUser, setIsResultClicked }) => {
 
-    const dispatch: AppDispatchType = useDispatch()
-
+    
 
     return (
         <div
