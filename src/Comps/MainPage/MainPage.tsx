@@ -4,7 +4,6 @@ import css from './MainPage.module.css'
 import { getSum, getUsers } from "../../redux/profile-selectors";
 import { useDispatch, useSelector } from 'react-redux';
 import { UserItem } from "../UserItem/UserItem";
-// import homePic from '../../Assets/Img/2023-05-20 10-00-16.jpg'
 import { Button, Space } from "antd";
 import { setSum } from "../../redux/profile-reducer";
 import { AppDispatchType } from "../../redux/redux-store";
@@ -86,6 +85,10 @@ export const MainPage: React.FC<PropsType> = () => {
                         </Space>
 
                         {/* <img src={homePic} alt="" style={{width:'200px'}} /> */}
+                    </div>
+
+                    <div className={css.footer}>
+
                     </div>
 
                 </div>
